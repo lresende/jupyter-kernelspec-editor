@@ -6,3 +6,11 @@ body {
 a {
   color: #00B7FF;
 }
+
+#editor {
+  position: absolute;
+  left:60px;
+  top:200px;
+  width: 70%;
+  height: 500px;
+}
