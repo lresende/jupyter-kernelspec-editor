@@ -23,15 +23,17 @@
   <body>
     <h1>Welcome to <%= title %></h1>
 
-    <select id="kernelspec">
-    <%  Object.keys(kernelspecs).forEach(function (key) { %>
-      <option value=<%= key %> ><%= kernelspecs[key] %></option>
-    <% }) %>
-    </select>
+    <div>
+      <select id="kernelspec">
+      <%  Object.keys(kernelspecs).forEach(function (key) { %>
+        <option value=<%= key %> ><%= kernelspecs[key] %></option>
+      <% }) %>
+      </select>
 
-    <span>
-      <button id="open-kernelspec" class="btn" />Open</input>
-    </span>
+      <span>
+        <button id="btnOpenKernelspec" class="btn" />Open</input>
+      </span>
+    </div>
 
     <div id="editor"></div>
 
@@ -65,9 +67,9 @@
             // enableBlockSelect: false,
             // enableMultiselect: false,
           });
-        });
 
-        $('#open-kernelspec').on('click', function(event) {
+
+          $('#btnOpenKernelspec.btn').on('click',  function(event) {
             event.preventDefault(); // To prevent following the link (optional)
 
             let selectedKernelspec = $('#kernelspec option:selected').val().toLowerCase();
@@ -76,7 +78,13 @@
             $.get( '/api/kernelspec/' + selectedKernelspec, function(data, status) {
               updateEditor(JSON.stringify(data, null, '\t'));
             });
+          });
+
+
+
         });
+
+
     </script>
   </body>
 </html>
