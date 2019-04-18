@@ -1,14 +1,7 @@
-ace.define("ace/snippets/gherkin",["require","exports","module"], function(require, exports, module) {
+define(function(require, exports, module) {
 "use strict";
 
-exports.snippetText =undefined;
+exports.snippetText = require("../requirejs/text!./gherkin.snippets");
 exports.scope = "gherkin";
 
-});                (function() {
-                    ace.require(["ace/snippets/gherkin"], function(m) {
-                        if (typeof module == "object" && typeof exports == "object" && module) {
-                            module.exports = m;
-                        }
-                    });
-                })();
-            
+});

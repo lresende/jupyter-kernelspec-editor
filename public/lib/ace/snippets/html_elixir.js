@@ -1,14 +1,7 @@
-ace.define("ace/snippets/html_elixir",["require","exports","module"], function(require, exports, module) {
+define(function(require, exports, module) {
 "use strict";
 
-exports.snippetText =undefined;
+exports.snippetText = require("../requirejs/text!./html_elixir.snippets");
 exports.scope = "html_elixir";
 
-});                (function() {
-                    ace.require(["ace/snippets/html_elixir"], function(m) {
-                        if (typeof module == "object" && typeof exports == "object" && module) {
-                            module.exports = m;
-                        }
-                    });
-                })();
-            
+});

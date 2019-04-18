@@ -1,14 +1,7 @@
-ace.define("ace/snippets/jssm",["require","exports","module"], function(require, exports, module) {
+define(function(require, exports, module) {
 "use strict";
 
-exports.snippetText =undefined;
+exports.snippetText = require("../requirejs/text!./.snippets");
 exports.scope = "";
 
-});                (function() {
-                    ace.require(["ace/snippets/jssm"], function(m) {
-                        if (typeof module == "object" && typeof exports == "object" && module) {
-                            module.exports = m;
-                        }
-                    });
-                })();
-            
+});

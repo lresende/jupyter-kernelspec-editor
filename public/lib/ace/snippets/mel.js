@@ -1,14 +1,7 @@
-ace.define("ace/snippets/mel",["require","exports","module"], function(require, exports, module) {
+define(function(require, exports, module) {
 "use strict";
 
-exports.snippetText =undefined;
+exports.snippetText = require("../requirejs/text!./mel.snippets");
 exports.scope = "mel";
 
-});                (function() {
-                    ace.require(["ace/snippets/mel"], function(m) {
-                        if (typeof module == "object" && typeof exports == "object" && module) {
-                            module.exports = m;
-                        }
-                    });
-                })();
-            
+});

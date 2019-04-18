@@ -1,14 +1,7 @@
-ace.define("ace/snippets/glsl",["require","exports","module"], function(require, exports, module) {
+define(function(require, exports, module) {
 "use strict";
 
-exports.snippetText =undefined;
+exports.snippetText = require("../requirejs/text!./glsl.snippets");
 exports.scope = "glsl";
 
-});                (function() {
-                    ace.require(["ace/snippets/glsl"], function(m) {
-                        if (typeof module == "object" && typeof exports == "object" && module) {
-                            module.exports = m;
-                        }
-                    });
-                })();
-            
+});

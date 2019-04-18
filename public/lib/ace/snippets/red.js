@@ -1,14 +1,7 @@
-ace.define("ace/snippets/red",["require","exports","module"], function(require, exports, module) {
+define(function(require, exports, module) {
 "use strict";
 
-exports.snippetText = " ";
+exports.snippetText = require("../requirejs/text!./red.snippets");
 exports.scope = "red";
 
-});                (function() {
-                    ace.require(["ace/snippets/red"], function(m) {
-                        if (typeof module == "object" && typeof exports == "object" && module) {
-                            module.exports = m;
-                        }
-                    });
-                })();
-            
+});

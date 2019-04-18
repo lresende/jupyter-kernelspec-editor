@@ -1,14 +1,7 @@
-ace.define("ace/snippets/stylus",["require","exports","module"], function(require, exports, module) {
+define(function(require, exports, module) {
 "use strict";
 
-exports.snippetText =undefined;
+exports.snippetText = require("../requirejs/text!./stylus.snippets");
 exports.scope = "stylus";
 
-});                (function() {
-                    ace.require(["ace/snippets/stylus"], function(m) {
-                        if (typeof module == "object" && typeof exports == "object" && module) {
-                            module.exports = m;
-                        }
-                    });
-                })();
-            
+});

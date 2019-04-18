@@ -1,14 +1,7 @@
-ace.define("ace/snippets/tsx",["require","exports","module"], function(require, exports, module) {
+define(function(require, exports, module) {
 "use strict";
 
-exports.snippetText =undefined;
+exports.snippetText = require("../requirejs/text!./tsx.snippets");
 exports.scope = "tsx";
 
-});                (function() {
-                    ace.require(["ace/snippets/tsx"], function(m) {
-                        if (typeof module == "object" && typeof exports == "object" && module) {
-                            module.exports = m;
-                        }
-                    });
-                })();
-            
+});

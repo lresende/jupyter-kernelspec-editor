@@ -1,14 +1,7 @@
-ace.define("ace/snippets/dot",["require","exports","module"], function(require, exports, module) {
+define(function(require, exports, module) {
 "use strict";
 
-exports.snippetText =undefined;
+exports.snippetText = require("../requirejs/text!./dot.snippets");
 exports.scope = "dot";
 
-});                (function() {
-                    ace.require(["ace/snippets/dot"], function(m) {
-                        if (typeof module == "object" && typeof exports == "object" && module) {
-                            module.exports = m;
-                        }
-                    });
-                })();
-            
+});
